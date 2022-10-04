@@ -1,7 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Header from "./components/Header";
 import Scroll from "./components/Scroll";
-import "./Index.css";
 
 function App() {
   return (
