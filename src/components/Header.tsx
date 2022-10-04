@@ -2,7 +2,7 @@ import Selection from "./Selection";
 
 function Header() {
   return (
-    <header className="text-white">
+    <header className="text-white h-11">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-extrabold">
           RAHEL
