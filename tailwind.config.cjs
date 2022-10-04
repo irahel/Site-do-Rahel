@@ -13,9 +13,20 @@ module.exports = {
         'white': '#F7F7F7',
         'blue': '#a4c2f4',
       },
-      margin: {
-        '15%': '15%',
-      }
+      keyframes: {
+        scroll_2: {
+          '0%': { transform: 'translateY(0)',
+                  opacity: '1' },
+          '25%': { opacity: '1' },
+          '75%': { transform: 'translateY(0.75rem)',
+            opacity: '0' },
+          '100%': { transform: 'translateY(0)',
+            opacity: '0', },
+        },
+      },
+      animation: {
+        'scroll': 'scroll_2 2s linear infinite',
+      },
     },
   },
   plugins: [],

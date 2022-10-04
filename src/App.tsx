@@ -1,5 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Header from "./components/Header";
+import Scroll from "./components/Scroll";
 import "./Index.css";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           className="h-[420px] w-[420px] rounded-full bg-blue"
         />
       </div>
+      <Scroll />
     </section>
   );
 }
