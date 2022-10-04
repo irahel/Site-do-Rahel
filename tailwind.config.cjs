@@ -8,6 +8,9 @@ module.exports = {
       serif: ['Bitter', 'serif']
     },
     extend: {
+      margin: {
+        '15%': '15%',
+      },
       colors: {
         'dark': '#10101A',
         'white': '#F7F7F7',

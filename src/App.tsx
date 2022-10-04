@@ -4,7 +4,7 @@ import Scroll from "./components/Scroll";
 
 function App() {
   return (
-    <section className="pt-11 bg-dark h-screen flex flex-col justify-between mx-56">
+    <section className="pt-11 bg-dark h-screen flex flex-col justify-between mx-[15%]">
       <Header />
       <div className="flex flex-row justify-between items-center pb-32 gap-24">
         <article className="text-white flex flex-col w-full">
