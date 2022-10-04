@@ -6,7 +6,7 @@ function App() {
   return (
     <section className="pt-11 bg-dark h-screen flex flex-col justify-between mx-[15%]">
       <Header />
-      <div className="flex flex-row justify-between items-center pb-32 gap-24">
+      <div className="flex flex-row items-center pb-32 gap-24">
         <article className="text-white flex flex-col w-full">
           <h1 className="text-6xl font-serif font-normal">
             Olá, meu

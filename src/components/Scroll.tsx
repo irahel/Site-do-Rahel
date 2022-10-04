@@ -1,6 +1,6 @@
 function Scroll() {
   return (
-    <div className="absolute bottom-24 self-center opacity-40">
+    <div className="relative bottom-24 self-center opacity-40">
       <span
         className="block relative h-12 w-6
         border-[.25rem] border-solid border-white
