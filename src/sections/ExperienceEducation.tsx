@@ -1,6 +1,6 @@
-import BulletHistoryLine from "../components/BulletHistoryLine";
-import ItemHistoryLineProps from "../components/ItemHistoryLine";
-import TitleHistoryLine from "../components/TitleHistoryLine";
+import BulletHistoryLine from "../components/HistoryLine/BulletHistoryLine";
+import ItemHistoryLineProps from "../components/HistoryLine/ItemHistoryLine";
+import TitleHistoryLine from "../components/HistoryLine/TitleHistoryLine";
 
 function ExperienceEducation() {
   return (
