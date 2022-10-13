@@ -5,7 +5,7 @@ function Header() {
   const [overItem, setOverItem] = useState(0);
   const [selectedItem, setSelectedItem] = useState(1);
   const [sticky, setSticky] = useState(false);
-  let timeout: number;
+
   const { innerHeight: height } = window;
   const element1Home = document.getElementById("home")?.clientHeight ?? 0;
   const element2Education =
@@ -18,10 +18,9 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
       if (window.scrollY > 0) setSticky(true);
       else setSticky(false);
-      //innerHeight / 2 - elementHeight / 2
+
       let acumullate = element1Home;
       const offsetScrollClick = 5;
       let scrollPoint = window.scrollY + height / 2 + offsetScrollClick;
