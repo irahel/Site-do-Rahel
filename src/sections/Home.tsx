@@ -49,6 +49,7 @@ function Home() {
           className="h-[420px] w-[420px] rounded-full bg-blue"
         />
       </div>
+      {/*//TODO: se scroll, sumir */}
       <Scroll />
     </section>
   );

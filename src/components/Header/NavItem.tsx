@@ -6,6 +6,8 @@ interface NavItemProps {
   navTo: string;
   isSelected: number;
   setIsSelected: Function;
+  isOver: number;
+  setIsOver: Function;
 }
 
 function NavItem({
@@ -14,22 +16,39 @@ function NavItem({
   navTo,
   isSelected,
   setIsSelected,
+  isOver,
+  setIsOver,
 }: NavItemProps) {
-  const { innerWidth: width, innerHeight: height } = window;
+  const { innerHeight: height } = window;
   const elementHeight = document.getElementById(navTo)?.clientHeight ?? 0;
 
   const scrollOffset =
     elementHeight < innerHeight ? innerHeight / 2 - elementHeight / 2 : 0;
 
+  let SelectionAppear = false;
+  if (isOver == 0) {
+    if (isSelected == id) SelectionAppear = true;
+  } else if (isOver == id) SelectionAppear = true;
+
   return (
     <nav
       className="flex flex-col items-center"
       onMouseEnter={() => {
-        setIsSelected(id);
+        setIsOver(id);
       }}
     >
-      <Link to={navTo} spy={true} smooth={true} offset={-scrollOffset}>
-        {title} {isSelected == id && <Selection />}
+      <Link
+        to={navTo}
+        activeClass="active"
+        spy={true}
+        smooth={true}
+        offset={-scrollOffset}
+        onClick={() => {
+          console.log("AIIIIN DA UMA CHAMADINHA");
+          setIsSelected(id);
+        }}
+      >
+        {title} {SelectionAppear && <Selection />}
       </Link>
     </nav>
   );
