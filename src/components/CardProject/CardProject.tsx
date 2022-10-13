@@ -84,7 +84,7 @@ function CardProject({
         <div
           className="flex flex-row items-start h-9
                       flex-wrap overflow-hidden
-                    gap-3 ml-6 my-4"
+                    gap-3 mx-6 my-4"
         >
           {stacksBubbles.map((stack) => {
             return <Tag name={stack} />;

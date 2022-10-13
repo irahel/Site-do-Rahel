@@ -26,6 +26,7 @@ module.exports = {
         },
       margin: {
         '15%': '15%',
+        '50%': '50%',
       },
       colors: {
         'dark': '#10101A',
