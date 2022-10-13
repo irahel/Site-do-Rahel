@@ -8,7 +8,7 @@ function Contact() {
   };
 
   return (
-    <section className="bg-blue px-[15%]">
+    <section id="contacts" className="bg-blue px-[15%]">
       <section className="-translate-y-1/2">
         <div className="bg-dark grid grid-flow-row grid-cols-3 items-center rounded-3xl py-12 px-12">
           <div className="flex flex-row items-center justify-start gap-2 ">

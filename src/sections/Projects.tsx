@@ -24,6 +24,7 @@ function Projects() {
 
   return (
     <section
+      id="projects"
       className="flex flex-col items-center bg-white px-[15%] pt-32 gap-24 pb-64"
       onClick={() => {
         if (!isHoveringCard) {

@@ -4,7 +4,10 @@ import CardSkill from "../components/CardSkill/CardSkill";
 
 function Skills() {
   return (
-    <section className="flex flex-col items-center bg-blue px-[15%] py-32 gap-24">
+    <section
+      id="skills"
+      className="flex flex-col items-center bg-blue px-[15%] py-32 gap-24"
+    >
       <TitleSection title="Habilidades" />
       <div className="flex flex-row items-start p-0 gap-6 columns-3">
         <CardSkill
@@ -37,7 +40,7 @@ function Skills() {
               <p>Tailwind</p>
               <p>ASP.NET</p>
               <p>Django</p>
-              <p>Beteram</p>
+              <a href="https://youtu.be/bjwgt1kRqEU?t=82">Beteram</a>
             </>
           }
         />
