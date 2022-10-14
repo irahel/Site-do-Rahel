@@ -46,7 +46,6 @@ function Header() {
         setSelectedItem(4);
         return;
       }
-
       setSelectedItem(5);
     };
 
@@ -54,7 +53,7 @@ function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   return (
     <>

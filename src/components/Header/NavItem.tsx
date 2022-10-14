@@ -19,7 +19,7 @@ function NavItem({
   isOver,
   setIsOver,
 }: NavItemProps) {
-  const { innerHeight: height } = window;
+  const { innerHeight } = window;
   const elementHeight = document.getElementById(navTo)?.clientHeight ?? 0;
 
   const scrollOffset =
@@ -44,7 +44,6 @@ function NavItem({
         smooth={true}
         offset={-scrollOffset}
         onClick={() => {
-          console.log("AIIIIN DA UMA CHAMADINHA");
           setIsSelected(id);
         }}
       >

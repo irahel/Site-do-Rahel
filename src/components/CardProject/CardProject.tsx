@@ -87,7 +87,7 @@ function CardProject({
                     gap-3 mx-6 my-4"
         >
           {stacksBubbles.map((stack) => {
-            return <Tag name={stack} />;
+            return <Tag name={stack} key={stack} />;
           })}
         </div>
       </div>
