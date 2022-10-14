@@ -50,6 +50,9 @@ module.exports = {
       animation: {
         'scroll': 'scroll_2 2s linear infinite',
       },
+      boxShadow: {
+        'header': '0px 4px 14px  rgba(0, 0, 0, 0.25)',
+      }
     },
   },
   plugins: [

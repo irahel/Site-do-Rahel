@@ -60,7 +60,10 @@ function Header() {
       {sticky && <div className="bg-dark h-11" />}
       <header
         className={`bg-dark text-white h-11 z-50
-      ${sticky && "fixed rounded-2xl px-8 py-6 h-fit w-fit self-center"}`}
+      ${
+        sticky &&
+        "fixed rounded-2xl px-8 py-6 h-fit w-fit self-center shadow-header"
+      }`}
       >
         <div className="flex justify-between items-center">
           {!sticky && (
