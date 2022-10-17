@@ -3,14 +3,7 @@ import { useEffect, useState } from "react";
 import { randomRangeInt } from "../Utils";
 
 const URL = "https://pensador-api.vercel.app/";
-const authorOptions = [
-  "Isaac+Asimov",
-  "Albert+Einstein",
-  "Isaac+Newton",
-  "Alan+Turing",
-  "Ada+Lovelace",
-  "Linus+Torvalds",
-];
+const authorOptions = ["Isaac+Asimov", "Albert+Einstein", "Isaac+Newton"];
 
 function Phrase() {
   const [quote, setQuote] = useState({
