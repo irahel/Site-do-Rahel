@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NavItem from "./Header/NavItem";
+import { getElementHeightById } from "./Utils";
 
 function Header() {
   const [overItem, setOverItem] = useState(0);
@@ -7,14 +8,11 @@ function Header() {
   const [sticky, setSticky] = useState(false);
 
   const { innerHeight: height } = window;
-  const element1Home = document.getElementById("home")?.clientHeight ?? 0;
-  const element2Education =
-    document.getElementById("education")?.clientHeight ?? 0;
-  const element3Skills = document.getElementById("skills")?.clientHeight ?? 0;
-  const element4Projects =
-    document.getElementById("projects")?.clientHeight ?? 0;
-  const element5Contact =
-    document.getElementById("contacts")?.clientHeight ?? 0;
+  const element1Home = getElementHeightById("home");
+  const element2Education = getElementHeightById("education");
+  const element3Skills = getElementHeightById("skills");
+  const element4Projects = getElementHeightById("projects");
+  const element5Contact = getElementHeightById("contacts");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +40,7 @@ function Header() {
       }
 
       acumullate += element4Projects;
-      if (scrollPoint < acumullate + element5Contact) {
+      if (scrollPoint < acumullate + element5Contact / 2) {
         setSelectedItem(4);
         return;
       }

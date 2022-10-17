@@ -5,3 +5,7 @@ export const handleClick = (link: string) => {
 export const randomRangeInt = (max: number) =>{
   return Math.floor(Math.random() * max);
 }
+
+export const getElementHeightById = (id: string) =>{
+  return document.getElementById(id)?.clientHeight ?? 0;
+}
