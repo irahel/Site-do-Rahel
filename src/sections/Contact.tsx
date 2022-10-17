@@ -1,12 +1,7 @@
 import { LinkedinLogo } from "phosphor-react";
+import { handleClick } from "../components/Utils";
 
 function Contact() {
-  const handleClickLindekin = () => {
-    window.open(
-      "https://www.linkedin.com/messaging/thread/2-Zjg1ZTY2Y2EtZjZhZC01ZjE3LWIzYjUtOTZmNGU1ZDRhOGMyXzAxMw==?controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=JkXA3Rs9QG%2BDmzJboYDUnw%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BKtZgIR9UTa6mEa7qYoS1dg%3D%3D"
-    );
-  };
-
   return (
     <section id="contacts" className="bg-blue px-[15%]">
       <section className="-translate-y-1/2">
@@ -29,7 +24,11 @@ function Contact() {
             className="bg-white flex flex-row gap-2 rounded-xl
       items-center justify-center px-5 py-3 justify-self-end"
             type="submit"
-            onClick={handleClickLindekin}
+            onClick={() =>
+              handleClick(
+                "https://www.linkedin.com/messaging/thread/2-Zjg1ZTY2Y2EtZjZhZC01ZjE3LWIzYjUtOTZmNGU1ZDRhOGMyXzAxMw==?controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=JkXA3Rs9QG%2BDmzJboYDUnw%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BKtZgIR9UTa6mEa7qYoS1dg%3D%3D"
+              )
+            }
           >
             <LinkedinLogo className="text-dark" size={20} weight="fill" />
             <h2 className="text-dark font-serif font-bold text-xs whitespace-nowrap">

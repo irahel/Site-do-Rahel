@@ -1,6 +1,7 @@
 import TitleSection from "../components/TitleSection";
 import { ChalkboardTeacher, Code, GameController } from "phosphor-react";
 import CardSkill from "../components/CardSkill/CardSkill";
+import { handleClick } from "../components/Utils";
 
 function Skills() {
   return (
@@ -40,7 +41,12 @@ function Skills() {
               <p>Tailwind</p>
               <p>ASP.NET</p>
               <p>Django</p>
-              <a href="https://youtu.be/bjwgt1kRqEU?t=82">Beteram</a>
+              <a
+                className="underline cursor-pointer"
+                onClick={() => handleClick("https://youtu.be/bjwgt1kRqEU?t=82")}
+              >
+                Beteram
+              </a>
             </>
           }
         />
