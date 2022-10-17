@@ -46,6 +46,7 @@ function Footer() {
           logoLink="/img/logos/arapua.svg"
           logoDescription="Logo da Arapuá"
           name={"arapuá"}
+          link={"https://arapua.company"}
         />
         <Divider />
         <Developer
@@ -56,6 +57,9 @@ function Footer() {
               Thomas <span className="font-light">Dillan</span>
             </>
           }
+          link={
+            "https://www.linkedin.com/messaging/thread/2-Zjg1ZTY2Y2EtZjZhZC01ZjE3LWIzYjUtOTZmNGU1ZDRhOGMyXzAxMw==?controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=8oSqDfn6QTegG1It49nffQ%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BckRoPWeGQaW6%2Bk2xIWHqyg%3D%3D"
+          }
         />
         <Divider />
         <Developer
@@ -64,6 +68,7 @@ function Footer() {
               RAHEL <span className="font-light">Martim</span>
             </>
           }
+          link={"https://github.com/irahel/Site-do-Rahel"}
         />
       </footer>
     </>
