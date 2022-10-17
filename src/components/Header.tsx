@@ -80,7 +80,7 @@ function Header() {
             }}
           >
             <NavItem
-              title={"Home"}
+              title={"Início"}
               navTo={"home"}
               id={1}
               isSelected={selectedItem}
