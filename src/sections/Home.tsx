@@ -44,7 +44,7 @@ function Home() {
           </h3>
         </article>
         <img
-          src="/avatar.png?nf_resize=fit&w=420"
+          src="https://github.com/irahel/Site-do-Rahel/blob/main/public/img/avatar.png?raw=true?nf_resize=fit&w=420"
           loading="lazy"
           alt="Rahel's avatar"
           className="h-[420px] w-[420px] rounded-full bg-blue"
