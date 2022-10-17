@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { randomRangeInt } from "../Utils";
 
 const URL = "https://pensador-api.vercel.app/";
 const authorOptions = [
@@ -8,37 +9,30 @@ const authorOptions = [
   "Isaac+Newton",
   "Alan+Turing",
   "Ada+Lovelace",
-  "Edsger+Dijkstra",
   "Linus+Torvalds",
 ];
 
 function Phrase() {
-  const [quote, setQuote] = useState({ phrase: "", author: "" });
+  const [quote, setQuote] = useState({
+    phrase:
+      "“Se o conhecimento pode criar problemas, não é através da ignorância que podemos solucioná-los”",
+    author: "Isaac Asimov",
+  });
 
   async function getQuoteOfTheDay(author: string) {
-    try {
-      let res = await axios({
-        method: "get",
-        url: URL + "?term=" + author,
-      });
-      const randomQuote = Math.floor(Math.random() * 11);
-      setQuote({
-        phrase: "“" + res.data.frases[randomQuote].texto + "”",
-        author: res.data.frases[randomQuote].autor,
-      });
-    } catch (err: any) {
-      setQuote({
-        phrase:
-          "“Se o conhecimento pode criar problemas, não é através da ignorância que podemos solucioná-los”",
-        author: "Isaac Asimov",
-      });
-    }
+    let res = await axios({
+      method: "get",
+      url: URL + "?term=" + author,
+    });
+    const randomQuote = randomRangeInt(res.data.frases.length);
+    setQuote({
+      phrase: "“" + res.data.frases[randomQuote].texto + "”",
+      author: res.data.frases[randomQuote].autor,
+    });
   }
 
   useEffect(() => {
-    getQuoteOfTheDay(
-      authorOptions[Math.floor(Math.random() * authorOptions.length)]
-    );
+    getQuoteOfTheDay(authorOptions[randomRangeInt(authorOptions.length)]);
   }, []);
 
   return (
