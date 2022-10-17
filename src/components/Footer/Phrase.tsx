@@ -2,7 +2,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const URL = "https://pensador-api.vercel.app/";
-const authorOptions = ["Isaac+Asimov", "Albert+Einstein", "Isaac+Newton"];
+const authorOptions = [
+  "Isaac+Asimov",
+  "Albert+Einstein",
+  "Isaac+Newton",
+  "Alan+Turing",
+  "Ada+Lovelace",
+  "Edsger+Dijkstra",
+  "Linus+Torvalds",
+];
 
 function Phrase() {
   const [quote, setQuote] = useState({ phrase: "", author: "" });
