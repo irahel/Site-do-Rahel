@@ -23,9 +23,9 @@ function Home() {
               <TypeAnimation
                 sequence={[
                   "instrutor de ciência da computação",
-                  1000, // Waits 1s
+                  1000,
                   "desenvolvedor front-end",
-                  1000, // Waits 2s
+                  1000,
                   "game programmer",
                   1000,
                   () => {},
@@ -49,7 +49,6 @@ function Home() {
           className="h-[420px] w-[420px] rounded-full bg-blue"
         />
       </div>
-      {/*//TODO: se scroll, sumir */}
       <Scroll />
     </section>
   );
