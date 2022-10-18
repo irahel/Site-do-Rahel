@@ -45,7 +45,6 @@ function Home() {
         </article>
         <img
           src="./img/avatar.png"
-          loading="eager"
           alt="Rahel's avatar"
           className="h-[420px] w-[420px] rounded-full bg-blue"
         />
