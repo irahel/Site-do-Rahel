@@ -18,22 +18,27 @@ function Footer() {
           <SocialButton
             icon={<LinkedinLogo size={24} color="#a4c2f4" weight="fill" />}
             link={"https://www.linkedin.com/in/rahel-und/"}
+            name={"Botão para LinkedIn"}
           />
           <SocialButton
             icon={<GithubLogo size={24} color="#a4c2f4" weight="fill" />}
             link={"https://github.com/irahel"}
+            name={"Botão para Github"}
           />
           <SocialButton
             icon={<EnvelopeSimple size={24} color="#a4c2f4" weight="bold" />}
             link={"mailto:rahelmartim@icloud.com"}
+            name={"Botão para enviar email"}
           />
           <SocialButton
             icon={<TwitterLogo size={24} color="#a4c2f4" weight="fill" />}
             link={"https://twitter.com/_illuminatiSun"}
+            name={"Botão para Twitter"}
           />
           <SocialButton
             icon={<InstagramLogo size={24} color="#a4c2f4" weight="bold" />}
             link={"https://www.instagram.com/rahel_und/"}
+            name={"Botão para Instagram"}
           />
         </div>
         <Phrase />

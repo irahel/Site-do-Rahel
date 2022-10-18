@@ -38,6 +38,7 @@ function NavItem({
       }}
     >
       <Link
+        name={"Navegação para " + title}
         to={navTo}
         activeClass="active"
         spy={true}
