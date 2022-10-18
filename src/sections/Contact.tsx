@@ -17,8 +17,8 @@ function Contact() {
             </h1>
           </div>
           <h1 className="text-white font-serif font-medium text-base text-center justify-self-stretch">
-            <p>Interresado em trabalhar comigo?</p>
-            <p>Nos falamos no linkedin, eu pago o café. ☕</p>
+            <p>Interessado em trabalhar comigo?</p>
+            <p>Nos falamos no LinkedIn, eu pago o café. ☕</p>
           </h1>
           <button
             className="bg-white flex flex-row gap-2 rounded-xl
