@@ -4,5 +4,5 @@ import viteCompression from 'vite-plugin-compression';
 
 
 export default defineConfig({
-  plugins: [react()]
+  plugins: [react(), viteCompression({ deleteOriginFile: true }),]
 })
