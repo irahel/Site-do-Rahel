@@ -39,18 +39,13 @@ function CardProject({
     }, 1000);
   };
 
-  const stopTimer = () => {
-    if (refTimerBgCarrousel.current === null) return;
-    window.clearTimeout(refTimerBgCarrousel.current);
-    refTimerBgCarrousel.current = null;
-  };
   return (
     <div
       className={`
       flex flex-col justify-between
       rounded-3xl
       h-[600px]
-       bg-cover bg-no-repeat bg-center
+      bg-cover bg-no-repeat bg-center
       group
       ${ActualHoverCard == id ? `col-span-2 ${bg_max}` : bg_mini}
       `}
@@ -61,34 +56,53 @@ function CardProject({
         }
       }}
     >
-      <h2
-        className="flex flex-row items-center
-        font-serif text-sm font-bold text-white gap-4 px-6 py-6 mb-56"
+      <div
+        className={` flex flex-col justify-between rounded-3xl
+        h-full
+        ${ActualHoverCard != id && `group-hover:bg-card-project-hover`}
+      `}
       >
-        {stackIcon}
-        {stack}
-      </h2>
-
-      <div className="bg-card-project pt-11 rounded-3xl justify-self-end">
-        <div className="px-6">
-          <h1 className="font-serif font-bold text-2xl text-white">{name}</h1>
+        <h2
+          className="flex flex-row items-center
+        font-serif text-sm font-bold text-white gap-4 px-6 py-6 mb-56"
+        >
+          {stackIcon}
+          {stack}
+        </h2>
+        {ActualHoverCard != id && (
           <h2
-            className={`text-white font-serif font-normal text-base mt-4 leading-relaxed
+            className="text-white font-serif font-bold text-base items-center justify-center
+          self-center
+          hidden h-full -translate-y-1/2
+          border-dashed border-4
+          p-4
+          group-hover:flex"
+          >
+            Mais informações
+          </h2>
+        )}
+
+        <div className="bg-card-project pt-11 rounded-3xl justify-self-end">
+          <div className="px-6">
+            <h1 className="font-serif font-bold text-2xl text-white">{name}</h1>
+            <h2
+              className={`text-white font-serif font-normal text-base mt-4 leading-relaxed
             h-full
             line-clamp-3
             `}
-          >
-            {description}
-          </h2>
-        </div>
-        <div
-          className="flex flex-row items-start h-9
+            >
+              {description}
+            </h2>
+          </div>
+          <div
+            className="flex flex-row items-start h-9
                       flex-wrap overflow-hidden
                     gap-3 mx-6 my-4"
-        >
-          {stacksBubbles.map((stack) => {
-            return <Tag name={stack} key={stack} />;
-          })}
+          >
+            {stacksBubbles.map((stack) => {
+              return <Tag name={stack} key={stack} />;
+            })}
+          </div>
         </div>
       </div>
     </div>

@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'card-project': 'linear-gradient(0deg, #10101A 65%, rgba(16, 16, 26, 0) 100%)',
+        'card-project-hover': 'linear-gradient(0deg, rgba(16, 16, 26, 0.8), rgba(16, 16, 26, 0.8))',
         'neide-mini': 'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/neide/neide-mini.jpg")',
         'trybe-mini': 'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/trybe/trybe-mini.jpg")',
         'esports-mini': 'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/esports/esports-mini.jpg")',
