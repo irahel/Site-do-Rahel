@@ -17,7 +17,7 @@ function Developer({ logoLink, logoDescription, name, link }: DeveloperProps) {
       <h2
         className="text-white text-bold font-medium text-center font-serif pl-2
       hidden
-      md:block"
+      md:flex"
       >
         {name}
       </h2>
