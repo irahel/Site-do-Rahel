@@ -72,7 +72,9 @@ function Header() {
           )}
 
           <div
-            className="flex gap-8"
+            className="gap-8
+            hidden
+            md:flex"
             onMouseLeave={() => {
               setOverItem(0);
             }}

@@ -14,7 +14,11 @@ function Developer({ logoLink, logoDescription, name, link }: DeveloperProps) {
       onClick={() => handleClick(link)}
     >
       {logoLink && <img className="h-6" src={logoLink} alt={logoDescription} />}
-      <h2 className="text-white text-bold font-medium text-center font-serif pl-2">
+      <h2
+        className="text-white text-bold font-medium text-center font-serif pl-2
+      hidden
+      md:block"
+      >
         {name}
       </h2>
     </span>

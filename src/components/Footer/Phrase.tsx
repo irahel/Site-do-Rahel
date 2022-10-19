@@ -31,7 +31,7 @@ function Phrase() {
   return (
     <div
       className="text-center text-dark
-    flex flex-col items-center w-[580px] justify-center gap-2"
+    flex flex-col items-center w-full justify-center gap-2"
     >
       <h1 className="text-2xl font-bold font-serif">{quote.phrase}</h1>
       <h2 className="text-base font-medium font-serif">{quote.author}</h2>

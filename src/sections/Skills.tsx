@@ -7,10 +7,18 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center bg-blue px-[15%] py-32 gap-24"
+      className="flex flex-col items-center bg-blue
+      px-8 py-10 gap-10
+      md:px-[15%] md:py-32 md:gap-24
+      "
     >
       <TitleSection title="Habilidades" />
-      <div className="flex flex-row items-start p-0 gap-6 columns-3">
+      <div
+        className="flex items-start p-0 gap-6 columns-3
+      flex-col
+      md:flex-row
+      "
+      >
         <CardSkill
           icon={<ChalkboardTeacher size={32} />}
           title={"Instrutor de computação"}

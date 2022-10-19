@@ -13,8 +13,12 @@ import Phrase from "../components/Footer/Phrase";
 function Footer() {
   return (
     <>
-      <section className="bg-blue flex flex-col items-center justify-around pt-6 pb-28 gap-16">
-        <div className="flex flex-row items-center justify-center gap-6">
+      <section
+        className="bg-blue flex flex-col items-center justify-around gap-16
+      px-8 py-10
+      md:px-[15%] md:py-32"
+      >
+        <div className="flex flex-row items-center justify-center gap-2 md:gap-6">
           <SocialButton
             icon={<LinkedinLogo size={24} color="#a4c2f4" weight="fill" />}
             link={"https://www.linkedin.com/in/rahel-und/"}
@@ -43,38 +47,46 @@ function Footer() {
         </div>
         <Phrase />
       </section>
-      <footer className="bg-dark w-full flex justify-center items-center py-6">
+      <footer
+        className="bg-dark w-full flex justify-center items-center py-6
+        flex-col
+        md:flex-row"
+      >
         <h1 className="text-white text-base font-medium text-center font-serif mr-3">
           Projetado e desenvolvido por:
         </h1>
-        <Developer
-          logoLink="/img/logos/arapua.svg"
-          logoDescription="Logo da Arapuá"
-          name={"arapuá"}
-          link={"https://arapua.company"}
-        />
-        <Divider />
-        <Developer
-          logoLink="/img/logos/thomas.svg"
-          logoDescription="Logo do Thomas"
-          name={
-            <>
-              Thomas <span className="font-light">Dillan</span>
-            </>
-          }
-          link={
-            "https://www.linkedin.com/messaging/thread/2-Zjg1ZTY2Y2EtZjZhZC01ZjE3LWIzYjUtOTZmNGU1ZDRhOGMyXzAxMw==?controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=8oSqDfn6QTegG1It49nffQ%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BckRoPWeGQaW6%2Bk2xIWHqyg%3D%3D"
-          }
-        />
-        <Divider />
-        <Developer
-          name={
-            <>
-              RAHEL <span className="font-light">Martim</span>
-            </>
-          }
-          link={"https://github.com/irahel/Site-do-Rahel"}
-        />
+        <div className="flex flex-row">
+          <Developer
+            logoLink="/img/logos/arapua.svg"
+            logoDescription="Logo da Arapuá"
+            name={"arapuá"}
+            link={"https://arapua.company"}
+          />
+          <Divider />
+          <Developer
+            logoLink="/img/logos/thomas.svg"
+            logoDescription="Logo do Thomas"
+            name={
+              <>
+                Thomas <span className="font-light">Dillan</span>
+              </>
+            }
+            link={
+              "https://www.linkedin.com/messaging/thread/2-Zjg1ZTY2Y2EtZjZhZC01ZjE3LWIzYjUtOTZmNGU1ZDRhOGMyXzAxMw==?controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=8oSqDfn6QTegG1It49nffQ%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BckRoPWeGQaW6%2Bk2xIWHqyg%3D%3D"
+            }
+          />
+          <Divider />
+          <Developer
+            logoLink="/img/logos/RM.svg"
+            logoDescription="Logo do Thomas"
+            name={
+              <>
+                RAHEL <span className="font-light">Martim</span>
+              </>
+            }
+            link={"https://github.com/irahel/Site-do-Rahel"}
+          />
+        </div>
       </footer>
     </>
   );

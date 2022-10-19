@@ -4,8 +4,17 @@ import TitleHistoryLine from "../components/HistoryLine/TitleHistoryLine";
 
 function ExperienceEducation() {
   return (
-    <section id="education" className="bg-white px-[15%] py-32">
-      <section className="flex flex-row items-start gap-10 p-0 columns-2">
+    <section
+      id="education"
+      className="bg-white
+      px-8 py-10
+      md:px-[15%] md:py-32"
+    >
+      <section
+        className="flex items-start gap-10 p-0 columns-2
+      flex-col
+      md:flex-row"
+      >
         <div className="h-full w-full flex flex-col items-start gap-9">
           <TitleHistoryLine title="Experiência" />
           <ol className="border-l-2 border-blue mt-2">

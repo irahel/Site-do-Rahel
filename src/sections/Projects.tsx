@@ -25,7 +25,9 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center bg-white px-[15%] pt-32 gap-24 pb-64"
+      className="flex flex-col items-center bg-white
+      px-8 py-10 gap-10
+      md:px-[15%] md:pt-32 md:pb-64 md:gap-24"
       onClick={() => {
         if (!isHoveringCard) {
           setActualHoverCard(0);
@@ -34,7 +36,9 @@ function Projects() {
     >
       <TitleSection title={"Projetos"} />
       <div
-        className={`grid grid-flow-row grid-cols-4 gap-5`}
+        className={`grid gap-5
+        grid-flow-col grid-rows-4
+        md:grid-flow-row md:grid-cols-4 md:grid-rows-1`}
         onMouseEnter={() => {
           stopTimer();
           setisHoveringCard(true);
