@@ -46,7 +46,7 @@ function ExperienceEducation() {
                   title="Prof. Substituto"
                   span="| Universidade Federal do Ceará"
                   details="Set de 2020 - Out de 2021"
-                  _extraStyles="mt-6"
+                  _extraStyles="md:mt-6"
                 />
               </div>
             </li>
