@@ -29,7 +29,7 @@ function CardProject({
   bg_mini,
   bg_max,
 }: CardProjectProps) {
-  const [bgMaxArrayIndex, setbgMaxArrayIndex] = useState(0);
+  //const [bgMaxArrayIndex, setbgMaxArrayIndex] = useState(0);
   const refTimerBgCarrousel = useRef<number | null>(null);
 
   const startTimer = () => {
