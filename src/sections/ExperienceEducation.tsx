@@ -25,7 +25,7 @@ function ExperienceEducation() {
                   title="Pessoa Instrutora de Ciência da Computação"
                   span="| Trybe"
                   details="Out de 2021 - Atual"
-                  _extraStyles="-mt-2"
+                  _extraStyles="-mt-8 md:-mt-2"
                 />
               </div>
             </li>
