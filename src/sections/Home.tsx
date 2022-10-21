@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Scroll from "../components/Scroll";
 
 function Home() {

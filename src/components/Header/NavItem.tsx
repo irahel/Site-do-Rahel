@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
-import Selection from "../Selection";
+import SelectionItem from "./Selection";
+import HoverItem from "./HoverItem";
 interface NavItemProps {
   title: string;
   id: number;
@@ -50,12 +51,7 @@ function NavItem({
         }}
         role="button"
       >
-        {title}{" "}
-        {isSelectedMe ? (
-          <Selection />
-        ) : (
-          isOverMe && <div className="rounded-full h-1 w-1 bg-blue mt-2"></div>
-        )}
+        {title} {isSelectedMe ? <SelectionItem /> : isOverMe && <HoverItem />}
       </Link>
     </nav>
   );

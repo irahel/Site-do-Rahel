@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import NavItem from "./Header/NavItem";
-import { getElementHeightById, pictureToLoad } from "./Utils";
+import NavItem from "./NavItem";
+import { getElementHeightById, pictureToLoad } from "../Utils";
 
 function Header() {
   const [overItem, setOverItem] = useState(0);
