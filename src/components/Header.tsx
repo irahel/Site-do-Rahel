@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import NavItem from "./Header/NavItem";
-import { getElementHeightById } from "./Utils";
+import { getElementHeightById, pictureToLoad } from "./Utils";
 
 function Header() {
   const [overItem, setOverItem] = useState(0);
@@ -14,10 +14,21 @@ function Header() {
   const element4Projects = getElementHeightById("projects");
   const element5Contact = getElementHeightById("contacts");
 
+  let imgLoaded = false;
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) setSticky(true);
-      else setSticky(false);
+      if (window.scrollY > 0) {
+        if (!imgLoaded) {
+          imgLoaded = true;
+          pictureToLoad.forEach((picture) => {
+            const img = new Image();
+            img.src = picture;
+          });
+        }
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
 
       let acumullate = element1Home;
       const offsetScrollClick = 5;

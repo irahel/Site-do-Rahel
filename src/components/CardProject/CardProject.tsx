@@ -1,5 +1,5 @@
 import { ArrowRight } from "phosphor-react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { handleClick } from "../Utils";
 import Tag from "./Tag";
 
