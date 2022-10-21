@@ -25,10 +25,8 @@ function NavItem({
   const scrollOffset =
     elementHeight < innerHeight ? innerHeight / 2 - elementHeight / 2 : 0;
 
-  let SelectionAppear = false;
-  if (isOver == 0) {
-    if (isSelected == id) SelectionAppear = true;
-  } else if (isOver == id) SelectionAppear = true;
+  const isOverMe = isOver == id;
+  const isSelectedMe = isSelected == id;
 
   return (
     <nav
@@ -38,6 +36,9 @@ function NavItem({
       }}
     >
       <Link
+        className={`${
+          isOverMe ? "text-blue" : "text-white"
+        } flex flex-col items-center justify-center`}
         name={"Navegação para " + title}
         to={navTo}
         activeClass="active"
@@ -49,7 +50,12 @@ function NavItem({
         }}
         role="button"
       >
-        {title} {SelectionAppear && <Selection />}
+        {title}{" "}
+        {isSelectedMe ? (
+          <Selection />
+        ) : (
+          isOverMe && <div className="rounded-full h-1 w-1 bg-blue mt-2"></div>
+        )}
       </Link>
     </nav>
   );
