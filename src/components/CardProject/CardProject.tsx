@@ -1,4 +1,6 @@
+import { ArrowRight } from "phosphor-react";
 import { useRef, useState } from "react";
+import { handleClick } from "../Utils";
 import Tag from "./Tag";
 
 interface CardProjectProps {
@@ -15,6 +17,7 @@ interface CardProjectProps {
   stacksBubbles: string[];
   bg_mini: string;
   bg_max: string;
+  projectLink: string;
 }
 
 function CardProject({
@@ -28,6 +31,7 @@ function CardProject({
   stacksBubbles,
   bg_mini,
   bg_max,
+  projectLink,
 }: CardProjectProps) {
   //const [bgMaxArrayIndex, setbgMaxArrayIndex] = useState(0);
   const refTimerBgCarrousel = useRef<number | null>(null);
@@ -39,6 +43,8 @@ function CardProject({
     }, 1000);
   };
 
+  const isActive = ActualHoverCard == id;
+
   return (
     <div
       className={`
@@ -47,19 +53,20 @@ function CardProject({
       h-[600px]
       bg-cover bg-no-repeat bg-center
       group
-      ${ActualHoverCard == id ? `col-span-2 ${bg_max}` : bg_mini}
+      ${isActive ? `col-span-2 ${bg_max}` : bg_mini}
       `}
       onClick={() => {
-        if (ActualHoverCard != id) {
+        if (!isActive) {
           setFunction(id);
           startTimer();
         }
       }}
+      role="button"
     >
       <div
         className={` flex flex-col justify-between rounded-3xl
         h-full
-        ${ActualHoverCard != id && `group-hover:bg-card-project-hover`}
+        ${!isActive && `group-hover:bg-card-project-hover`}
       `}
       >
         <h2
@@ -69,7 +76,7 @@ function CardProject({
           {stackIcon}
           {stack}
         </h2>
-        {ActualHoverCard != id && (
+        {!isActive && (
           <h2
             className="text-white font-serif font-bold text-base items-center justify-center
           self-center
@@ -96,12 +103,29 @@ function CardProject({
           </div>
           <div
             className="flex flex-row items-start h-9
-                      flex-wrap overflow-hidden
-                    gap-3 mx-6 my-4"
+                     mx-6 my-4
+                     justify-between"
           >
-            {stacksBubbles.map((stack) => {
-              return <Tag name={stack} key={stack} />;
-            })}
+            <div className="flex flex-row gap-3 items-start h-9 overflow-hidden flex-wrap">
+              {stacksBubbles.map((stack) => {
+                return <Tag name={stack} key={stack} />;
+              })}
+            </div>
+
+            {isActive && (
+              <div
+                className="flex flex-row items-center self-center"
+                onClick={() => handleClick(projectLink)}
+              >
+                <h2
+                  className="font-serif text-sm font-bold leading-7 text-white
+                hover:text-blue"
+                >
+                  Ver projeto
+                </h2>
+                <ArrowRight color="#FAFAFA" size={24} />
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -65,6 +65,7 @@ function Projects() {
             bg_max={"bg-neide-max-1"}
             stackIcon={<GameController size={24} />}
             stacksBubbles={["Unity", "C#"]}
+            projectLink={"https://gamejolt.com/games/Neide/557279"}
           />
         )}
         <CardProject
@@ -83,6 +84,7 @@ function Projects() {
           bg_max={"bg-trybe-max"}
           stackIcon={<Desktop size={24} />}
           stacksBubbles={["ReactJS", "TypeScript", "Tailwind"]}
+          projectLink={"http://tge-kappa.vercel.app/"}
         />
         <CardProject
           id={3}
@@ -100,6 +102,7 @@ function Projects() {
           bg_max={"bg-esports-max"}
           stackIcon={<DesktopTower size={24} />}
           stacksBubbles={["ReactJS", "ReactNative", "NodeJS"]}
+          projectLink={"https://github.com/irahel/eSports-Duo-Finder"}
         />
         {ActualHoverCard != 1 && ActualHoverCard != 2 && (
           <CardProject
@@ -118,6 +121,7 @@ function Projects() {
             bg_max={"bg-vc-max"}
             stackIcon={<Desktop size={24} />}
             stacksBubbles={["ReactJS", "CanvasSketch"]}
+            projectLink={"https://visual-coding-ideas.vercel.app/"}
           />
         )}
       </div>

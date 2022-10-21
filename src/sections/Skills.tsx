@@ -52,6 +52,7 @@ function Skills() {
               <a
                 className="underline cursor-pointer"
                 onClick={() => handleClick("https://youtu.be/bjwgt1kRqEU?t=82")}
+                role="button"
               >
                 Beteram
               </a>

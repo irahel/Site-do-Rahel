@@ -12,6 +12,7 @@ function Developer({ logoLink, logoDescription, name, link }: DeveloperProps) {
     <span
       className="flex flex-row cursor-pointer"
       onClick={() => handleClick(link)}
+      role="button"
     >
       {logoLink && <img className="h-6" src={logoLink} alt={logoDescription} />}
       <h2

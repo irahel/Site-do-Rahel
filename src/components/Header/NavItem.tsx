@@ -47,6 +47,7 @@ function NavItem({
         onClick={() => {
           setIsSelected(id);
         }}
+        role="button"
       >
         {title} {SelectionAppear && <Selection />}
       </Link>

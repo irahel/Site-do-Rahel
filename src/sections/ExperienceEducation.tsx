@@ -20,7 +20,7 @@ function ExperienceEducation() {
           <ol className="border-l-2 border-blue mt-2">
             <li>
               <div className="flex flex-start items-center">
-                <BulletHistoryLine _extraStyles="-mt-6" />
+                <BulletHistoryLine _extraStyles="-mt-8" />
                 <ItemHistoryLineProps
                   title="Pessoa Instrutora de Ciência da Computação"
                   span="| Trybe"

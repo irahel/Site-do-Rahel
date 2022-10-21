@@ -5,7 +5,8 @@ interface BulletHistoryLineProps {
 function BulletHistoryLine({ _extraStyles }: BulletHistoryLineProps) {
   return (
     <div
-      className={`bg-blue w-4 h-4 flex items-center justify-center rounded-full -ml-2 mr-3 ${_extraStyles}`}
+      className={`bg-blue w-4 h-4 flex
+       items-center justify-center rounded-full -ml-2 mr-3 ${_extraStyles}`}
     />
   );
 }
