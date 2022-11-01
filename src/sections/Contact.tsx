@@ -1,4 +1,4 @@
-import { LinkedinLogo } from "phosphor-react";
+import { HandWaving, LinkedinLogo } from "phosphor-react";
 import { handleClick } from "../components/Utils";
 
 function Contact() {
@@ -20,10 +20,11 @@ function Contact() {
             justify-center
             md:justify-start"
           >
-            <img
-              className="h-6 w-6 "
-              src="https://github.com/irahel/irahel/blob/main/gifs/Hi.gif?raw=true"
-              alt="Hello gif"
+            <HandWaving
+              className="animate-wiggle"
+              size={32}
+              color="#fffb00"
+              weight="fill"
             />
             <h1 className="text-white font-serif font-bold text-2xl">
               Bora conversar?

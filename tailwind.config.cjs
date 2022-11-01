@@ -45,9 +45,14 @@ module.exports = {
           '100%': { transform: 'translateY(0)',
             opacity: '0', },
         },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-9deg)' },
+          '50%': { transform: 'rotate(9deg)' },
+        }
       },
       animation: {
         'scroll': 'scroll_2 2s linear infinite',
+        'wiggle': 'wiggle 2s ease-in-out infinite',
       },
       boxShadow: {
         'header': '0px 4px 14px  rgba(0, 0, 0, 0.25)',
