@@ -61,7 +61,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
-    // ...
   ],
 }
 //#bebff4

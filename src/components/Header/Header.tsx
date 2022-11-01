@@ -7,7 +7,7 @@ function Header() {
   const [selectedItem, setSelectedItem] = useState(1);
   const [sticky, setSticky] = useState(false);
 
-  const { innerHeight: height } = window;
+  const { innerHeight: height, innerWidth: width } = window;
   const element1Home = getElementHeightById("home");
   const element2Education = getElementHeightById("education");
   const element3Skills = getElementHeightById("skills");
@@ -17,7 +17,7 @@ function Header() {
   let imgLoaded = false;
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 0 && width > 768) {
         if (!imgLoaded) {
           imgLoaded = true;
           pictureToLoad.forEach((picture) => {
