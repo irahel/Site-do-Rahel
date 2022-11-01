@@ -33,7 +33,7 @@ function CardProject({
   bg_max,
   projectLink,
 }: CardProjectProps) {
-  //const [bgMaxArrayIndex, setbgMaxArrayIndex] = useState(0);
+  const { innerWidth: width } = window;
   const refTimerBgCarrousel = useRef<number | null>(null);
 
   const startTimer = () => {
@@ -56,17 +56,17 @@ function CardProject({
       ${isActive ? `col-span-2 ${bg_max}` : bg_mini}
       `}
       onClick={() => {
-        if (!isActive) {
+        if (!isActive && width > 768) {
           setFunction(id);
           startTimer();
         }
       }}
-      role="button"
+      role={`${width > 768 && `button`}`}
     >
       <div
         className={` flex flex-col justify-between rounded-3xl
         h-full
-        ${!isActive && `group-hover:bg-card-project-hover`}
+        ${!isActive && width > 768 && `group-hover:bg-card-project-hover`}
       `}
       >
         <h2
@@ -78,12 +78,13 @@ function CardProject({
         </h2>
         {!isActive && (
           <h2
-            className="text-white font-serif font-bold text-base items-center justify-center
+            className={`text-white font-serif font-bold text-base items-center justify-center
           self-center
           hidden h-full -translate-y-1/2
           border-dashed border-4
           p-4
-          group-hover:flex"
+          ${width > 768 && `group-hover:flex`}
+          `}
           >
             Mais informações
           </h2>
